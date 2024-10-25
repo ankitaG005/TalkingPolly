@@ -7,7 +7,7 @@ import os
 app = Flask(__name__)
 
 # Initialize Polly client
-polly = boto3.client('polly', region_name='ap-south-1')
+polly = boto3.client('polly', region_name='us-east-1')
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
@@ -23,7 +23,7 @@ def index():
             response = polly.synthesize_speech(
                 Text=text,
                 OutputFormat='mp3',
-                VoiceId='Joanna'  # Change voice if needed
+                VoiceId='Matthew'  # Change voice if needed
             )
 
             # Save the audio stream to a temporary file

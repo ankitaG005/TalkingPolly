@@ -8,7 +8,7 @@ def synthesize_speech(text, output_file):
     response = polly.synthesize_speech(
         Text=text,
         OutputFormat='mp3',  # Format of the audio
-        VoiceId='Joanna'      # Choose from available voices (e.g., 'Matthew', 'Amy')
+        VoiceId='Matthew'      # Choose from available voices (e.g., 'Matthew', 'Amy')
     )
 
     # Save the audio stream to a file
